@@ -1,0 +1,8 @@
+{
+  "name": "quickrn-template-bottom-tab",
+  "version": "0.0.1",
+  "description": "QuickRN bare-bones bottomt tab template",
+  "repository": "git@github.com:QuickRN/quickrn-template-bottom-tab.git",
+  "author": "Henry Paulino @ QuickRN <corasan.dev@gmail.com>",
+  "license": "MIT"
+}
