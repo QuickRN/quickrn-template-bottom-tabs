@@ -18,4 +18,4 @@ You can either download, fork or run the following command:
 
 Make sure to rename the project by running
 
-`$ npx react-native-rename [NAME_OF_PROJECT]`
+`$ npx react-native-rename <NEW_PROJECT_NAME>`
