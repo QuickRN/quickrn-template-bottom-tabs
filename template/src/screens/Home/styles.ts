@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
   container: {
@@ -9,11 +9,10 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 30,
+    fontSize: 28,
     color: '#000',
     textAlign: 'center',
     fontWeight: '500',
-
   },
   indigo: {
     color: '#5046E4',
@@ -26,10 +25,9 @@ export default StyleSheet.create({
     paddingVertical: 20,
     color: '#445',
     fontWeight: '500',
-
   },
   code: {
     backgroundColor: '#f0f0f0',
     color: '#222',
-  }
+  },
 })

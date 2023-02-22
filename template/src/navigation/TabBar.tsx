@@ -1,8 +1,7 @@
-import type { ReactNode } from 'react'
-import styled from '@emotion/native'
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs/lib/typescript/src/types'
+import type { ReactNode } from 'react'
+import { StyleSheet, TouchableOpacity, useWindowDimensions, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { useWindowDimensions } from 'react-native'
 import { SvgProps } from 'react-native-svg'
 
 export default function TabBar(props: BottomTabBarProps) {
@@ -14,7 +13,7 @@ export default function TabBar(props: BottomTabBarProps) {
   const { bottom: insetBottom } = useSafeAreaInsets()
 
   return (
-    <Container style={{ paddingBottom: insetBottom }}>
+    <View style={[styles.container, { paddingBottom: insetBottom }]}>
       {state.routes.map((route: any, routeIndex: number) => {
         const focused: boolean = activeRoute === routeIndex
         const { options } = descriptors[route.key]
@@ -23,34 +22,34 @@ export default function TabBar(props: BottomTabBarProps) {
           (focused ? tabBarActiveTintColor : tabBarInactiveTintColor) ?? '#000'
         const icon = tabBarIcon as (iconProps: SvgProps) => ReactNode
         return (
-          <Tab
-            style={{ width: tabWidth }}
+          <TouchableOpacity
+            style={[styles.tab, { width: tabWidth }]}
             onPress={() => navigation.navigate(route.name)}
             key={route.key}
           >
-            {icon && icon({ stroke: tintColor, height: 34, width: 34 })}
-          </Tab>
+            {icon && icon({ stroke: tintColor, height: 28, width: 28 })}
+          </TouchableOpacity>
         )
       })}
-    </Container>
+    </View>
   )
 }
-
-const Container = styled.View({
-  width: '100%',
-  backgroundColor: '#fff',
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  shadowColor: '#c2c2c2',
-  shadowOffset: { height: -0.5, width: 0 },
-  shadowOpacity: 0.3,
-  shadowRadius: 6,
-})
-
-const Tab = styled.TouchableOpacity({
-  alignItems: 'center',
-  justifyContent: 'center',
-  paddingTop: 12,
-  paddingBottom: 4,
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    backgroundColor: '#fff',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    shadowColor: '#c2c2c2',
+    shadowOffset: { height: -0.5, width: 0 },
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
+  },
+  tab: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 12,
+    paddingBottom: 4,
+  },
 })

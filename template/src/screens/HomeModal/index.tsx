@@ -1,16 +1,18 @@
-import { Container, Title, Indigo, SubText, Code } from './styles'
+import { Text, View } from 'react-native'
 import PhoneSVG from '~assets/svg/phone.svg'
+import styles from './styles'
 
 export default function Home() {
   return (
-    <Container>
+    <View style={styles.container}>
       <PhoneSVG height={220} width={220} />
-      <Title>
-        This is a <Indigo>QuickRN</Indigo> template
-      </Title>
-      <SubText>
-        Go to <Code> src/screens/HomeModal/index.js </Code> to edit this screen.
-      </SubText>
-    </Container>
+      <Text style={styles.title}>
+        This is <Text style={styles.indigo}>BottomTabs</Text> template
+      </Text>
+      <Text style={styles.subtext}>
+        Go to <Text style={styles.code}> src/screens/HomeModal/index.js </Text> to edit
+        this screen.
+      </Text>
+    </View>
   )
 }

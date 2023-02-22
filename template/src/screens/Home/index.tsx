@@ -10,10 +10,11 @@ export default function Home() {
     <View style={styles.container}>
       <HomeSVG height={100} width={100} stroke="#5046E4" />
       <Text style={styles.title}>
-        This is <Text style={styles.indigo}>QuickRN BottomTabs</Text> template
+        This is the <Text style={styles.indigo}>BottomTabs</Text> template
       </Text>
       <Text style={styles.subtext}>
-        Go to <Text style={styles.code}> src/screens/Home/index.js </Text> to edit this screen.
+        Go to <Text style={styles.code}> src/screens/Home/index.js </Text> to edit this
+        screen.
       </Text>
       <Button
         title="Go to HomeModal"
