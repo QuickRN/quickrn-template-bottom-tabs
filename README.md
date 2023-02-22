@@ -1,4 +1,4 @@
-# QuickRN Basic Template
+# QuickRN Bottom Tabs Template
 
 Bare-bones template based on my usual setup for React Native projects.
 
